@@ -1,65 +1,80 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.scss";
+import Faq from "../components/Faq";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div className={styles.main_wrap}>
+            <Head>
+                <title>Frontend Mentor | FAQ Accordion Card</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            <div className={styles.container}>
+                <div className={styles.illustration}>
+                    <div className={styles.illustration_wrap}>
+                        <img
+                            src="/images/illustration-woman-online-mobile.svg"
+                            alt="woman"
+                            className={styles.image_mobile}
+                        />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+                        <img
+                            src="/images/illustration-woman-online-desktop.svg"
+                            alt="woman"
+                            className={styles.image_desktop}
+                        />
+                    </div>
+                    <div className={styles.cube}>
+                        <img
+                            src="/images/illustration-box-desktop.svg"
+                            alt="cube"
+                        />
+                    </div>
+                </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                <div className={styles.faq}>
+                    <h1>FAQ</h1>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                    <Faq
+                        question="
+                                How many team members can I invite? "
+                        answer="
+                                You can invite up to 2 additional users on the
+                                Free plan. There is no limit on team members for
+                                the Premium plan."
+                    />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                    <Faq
+                        question="
+                        What is the maximum file upload size? "
+                        answer="
+                        No more than 2GB. All files in your account must fit your allotted storage space."
+                    />
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                    <Faq
+                        question="
+                        How do I reset my password? "
+                        answer="
+                        Click “Forgot password” from the login page or “Change password” from your profile page.
+                        A reset link will be emailed to you."
+                    />
+
+                    <Faq
+                        question="
+                        Can I cancel my subscription? "
+                        answer="
+                        Yes! Send us a message and we’ll process your request no questions asked.."
+                    />
+
+                    <Faq
+                        question="
+                        Do you provide additional support? "
+                        answer="
+                        Chat and email support is available 24/7. Phone lines are open during normal business hours."
+                    />
+                </div>
+            </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    );
 }

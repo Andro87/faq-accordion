@@ -1,16 +1,70 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "kumbo";
+    src: url("../public/fonts/KumbhSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "kumbo";
+    src: url("../public/fonts/KumbhSans-Regular.ttf");
+    font-weight: 400;
+}
+
+:root {
+    /* Primary*/
+
+    /* Text*/
+
+    --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --Softred: hsl(14, 88%, 65%);
+
+    /* Gradient*/
+
+    /*Background gradient:*/
+
+    --Softviolet: hsl(273, 75%, 66%);
+    --Softblue: hsl(240, 73%, 65%);
+
+    /* Neutral*/
+
+    /*Text*/
+
+    --Verydarkgrayishblue: hsl(237, 12%, 33%);
+    --Darkgrayishblue: hsl(240, 6%, 50%);
+    /* Dividers*/
+
+    --Lightgrayishblue: hsl(240, 5%, 91%);
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: "kumbo";
+    color: var(--Verydarkgrayishblue);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+h1 {
+    color: var(--Verydarkdesaturatedblue);
+    font-family: "kumbo";
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+p {
+    line-height: 150%;
+}
+@media screen and (max-width: 480px) {
+    h1 {
+        text-align: center;
+    }
 }

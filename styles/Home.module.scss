@@ -1,0 +1,98 @@
+.main_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px;
+
+    background: linear-gradient(to bottom, var(--Softviolet), var(--Softblue));
+    @media screen and (max-width: 480px) {
+        padding: 158px 25px;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    border-radius: 10px;
+    @media screen and (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: auto;
+    background: url("../public/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 155% 50%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @media screen and (max-width: 480px) {
+        background: url("../public/images/bg-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: visible;
+        background-size: 90%;
+    }
+}
+.illustration_wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_mobile {
+    display: none;
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        position: relative;
+        right: 5%;
+        transform: translateY(-60%);
+        width: 100%;
+    }
+}
+
+.image_desktop {
+    width: 100%; /**/
+    transform: translateX(-18%);
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+}
+
+.cube {
+    position: absolute;
+    left: 3%;
+    top: 62%;
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+}
+
+.faq {
+    padding: 50px; /**/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width: 480px) {
+        padding: 10px;
+        margin-top: -80px;
+    }
+}
